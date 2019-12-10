@@ -6,7 +6,7 @@
 
 ## Description
 
-_ _
+__
 
 |Behavior|Input|Output|
 |---|---|---|
