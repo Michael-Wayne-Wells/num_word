@@ -1,18 +1,18 @@
-# _ _
+# _Number Conversion Matrix_
 
-#### _  _
+#### _The program for converting numbers into words!_
 
-#### By _**Michael Wells**_
+#### By _**Michael Wells and Ike Esquivel-Pilloud**_
 
 ## Description
 
-__
+_This is a practice project with a class that can convert any number below 14 digits into written-numerals._
 
 |Behavior|Input|Output|
 |---|---|---|
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| The program will take a number. | "3" | "3" |
+| The program will | "" | "" |
+| The program will | "" | "" |
 
 ## Setup/Installation Requirements
 
