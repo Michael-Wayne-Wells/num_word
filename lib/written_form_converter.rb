@@ -47,16 +47,16 @@ class Converter
     milestones = {
       0 => "",
       1 => "",
-      2 => "-hundred and ",
+      2 => "-hundred ",
       3 => "-thousand ",
       4 => "",
-      5 => "-hundred and ",
+      5 => "-hundred ",
       6 => "-million ",
       7 => "",
-      8 => "-hundred and ",
+      8 => "-hundred ",
       9 => "-billion ",
       10 => "",
-      11 => "-hundred and ",
+      11 => "-hundred ",
       12 => "-trillion "
     }
     reverse_number = @number.reverse()
@@ -64,7 +64,7 @@ class Converter
     num_array = []
     while (reverse_number.length() > x)
       if reverse_number[x] == "0"
-        num_array.unshift('')
+        num_array.unshift("")
       else
         if (x == 1) | (x == 4) | (x == 7) | (x == 10)
           if reverse_number[x] == "1"
@@ -73,7 +73,6 @@ class Converter
           else
             num_array.unshift(tens.fetch(reverse_number[x]) + milestones.fetch(x))
           end
-
         else
           num_array.unshift(ones.fetch(reverse_number[x]) + milestones.fetch(x))
         end
@@ -82,5 +81,4 @@ class Converter
     end
     num_array.join("")
   end
-
 end

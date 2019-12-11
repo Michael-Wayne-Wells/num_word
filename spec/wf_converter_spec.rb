@@ -28,11 +28,11 @@ describe(Converter) do
     end
     it('converts hundreds-type digits into written form') do
       test = Converter.new("120")
-      expect(test.to_written_form).to(eq("one-hundred and twenty"))
+      expect(test.to_written_form).to(eq("one-hundred twenty"))
     end
     it('converts thousands-type digits into written form') do
       test = Converter.new("1110")
-      expect(test.to_written_form).to(eq("one-thousand one-hundred and ten"))
+      expect(test.to_written_form).to(eq("one-thousand one-hundred ten"))
     end
     it('converts huge number of digits into written form') do
       test = Converter.new("1000000")
