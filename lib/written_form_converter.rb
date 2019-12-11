@@ -1,13 +1,10 @@
 class Converter
-
   def initialize(number)
     @number = number
   end
-
   def number
     @number
   end
-
   def to_written_form
     ones = {
       "1" => "one",
@@ -60,26 +57,23 @@ class Converter
       9 => "-billion ",
       10 => "",
       11 => "-hundred and ",
-      12 => "-trillion ",
-
+      12 => "-trillion "
     }
-
     reverse_number = @number.reverse()
     x = 0
     num_array = []
     while (reverse_number.length() > x)
-      if (x == 1) | (x == 4) | (x == 7) | (x == 10)
-        if reverse_number[x] == "0"
-          num_array.unshift('')
-        elsif reverse_number[x] == "1"
-          num_array.shift()
-          num_array.unshift(teens.fetch(reverse_number[x] + reverse_number[(x-1)]) + milestones.fetch(x))
-        else
-          num_array.unshift(tens.fetch(reverse_number[x]) + milestones.fetch(x))
-        end
+      if reverse_number[x] == "0"
+        num_array.unshift('')
       else
-        if reverse_number[x] == "0"
-          num_array.unshift('')
+        if (x == 1) | (x == 4) | (x == 7) | (x == 10)
+          if reverse_number[x] == "1"
+            num_array.shift()
+            num_array.unshift(teens.fetch(reverse_number[x] + reverse_number[(x-1)]) + milestones.fetch(x))
+          else
+            num_array.unshift(tens.fetch(reverse_number[x]) + milestones.fetch(x))
+          end
+
         else
           num_array.unshift(ones.fetch(reverse_number[x]) + milestones.fetch(x))
         end
